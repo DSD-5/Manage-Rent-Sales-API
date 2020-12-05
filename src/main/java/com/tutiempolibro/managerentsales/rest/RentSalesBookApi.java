@@ -47,7 +47,7 @@ public class RentSalesBookApi {
 	    @NotNull @ApiParam(value = "reference value", required = true) @Valid @RequestParam(value = "reference", required = true) String reference,
 	    @NotNull @ApiParam(value = "preview = true --> Show Detail whitout process sale / preview = false --> process the sales with state processed", required = true) @Valid @RequestParam(value = "preview", required = true) Boolean preview,
 	    @ApiParam(value = "Identifier for the system originating the request") @RequestHeader(value = "Application", required = false) String application,
-	    @ApiParam(value = "Including the proof of access (using OAuth2.0 security model) to guarantee that the consumer has privileges to access the entity database") @RequestHeader(value = "Authorization", required = false) String authorization){
+	    @ApiParam(value = "Including the proof of access (using OAuth2.0 security model) to guarantee that the consumer has privileges to access the entity database") @RequestHeader(value = "Authorization", required = false) String authorization) throws Exception{
 	
 	return manageRentSalesService.rentSalesBook(suscriptionId, shoppingId, deliveryId, direction, reference, preview, authorization);
     }

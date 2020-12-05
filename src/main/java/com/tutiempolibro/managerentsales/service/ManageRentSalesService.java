@@ -13,7 +13,7 @@ public class ManageRentSalesService implements IManageRentSalesService {
     
     @Override
     public SummaryPurchaseType rentSalesBook(Integer suscriptionId, Integer shoppingId, Integer deliveryId, String direction,
-	    String reference, Boolean preview, String authorization) {
+	    String reference, Boolean preview, String authorization) throws Exception {
 	// TODO Auto-generated method stub
 	return rentSalesBusiness.rentSalesBook(suscriptionId, shoppingId, deliveryId, direction, reference, preview, authorization);
     }
